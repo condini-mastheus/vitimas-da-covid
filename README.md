@@ -2,7 +2,7 @@
 
 This project is a memorial to all brazillian people that lost their lives due the corona virus. It's inspiration comes from "The room of names" in Berlin.
 
-![room of names in Berlin](docs/rooms-of-names.png)
+![room of names in Berlin](docs/img/rooms-of-names.png)
 
 ## Design
 
