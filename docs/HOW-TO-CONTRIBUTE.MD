@@ -39,7 +39,7 @@ So let's have some concepts clear here:
 
 - **Atom** – the basic, easily reusable building block. For example label or button. `src/components/atoms/**`
 - **Molecule** – a group of atoms bonded together. Designed to do one thing. For example a single form field. `src/components/molecules/**`
-- **Organism** – a group of molecules (or even atoms) to create a more complex part of your application (for example, form). `src/components/organism/**`
+- **Organism** – a group of molecules (or even atoms) to create a more complex part of your application (for example, form). `src/components/organisms/**`
 - **Page** – the instance of a template. `src/pages/**`
 - **Template** – a template is just a layout. `src/layouts/**`
 
@@ -48,5 +48,5 @@ More info about Atomic Design convention: https://tsh.io/blog/atomic-design-expl
 **Ground rules to play**
 
 - All of molecules should be built using atoms only. No outsider components.
-- An atom should be easy to predict its behavior. Never override any atom behavior inside molecules or organism.
-- _todo..._
+- An atom should be easy to predict its behavior. Never override any atom behavior inside other components.
+- Molecules and atoms should not access the store directly. They only recieve props from organisms.
