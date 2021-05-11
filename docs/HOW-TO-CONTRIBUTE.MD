@@ -50,3 +50,9 @@ More info about Atomic Design convention: https://tsh.io/blog/atomic-design-expl
 - All of molecules should be built using atoms only. No outsider components.
 - An atom should be easy to predict its behavior. Never override any atom behavior inside other components.
 - Molecules and atoms should not access the store directly. They only recieve props from organisms.
+
+## Design Color Palette
+
+Using a grayscale plain and simple.
+
+![Grayscale color Palette](docs/img/grayscale-scheme.png)
