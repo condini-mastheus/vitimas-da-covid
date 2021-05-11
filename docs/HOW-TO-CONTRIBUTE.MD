@@ -55,4 +55,4 @@ More info about Atomic Design convention: https://tsh.io/blog/atomic-design-expl
 
 Using a grayscale plain and simple.
 
-![Grayscale color Palette](docs/img/grayscale-scheme.png)
+![Grayscale color Palette](../docs/img/grayscale-scheme.png)
