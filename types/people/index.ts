@@ -5,5 +5,5 @@ export interface PersonInterface {
 }
 
 export interface PeopleInterface {
-  people: Array<PersonInterface>
+  people: PersonInterface[]
 }

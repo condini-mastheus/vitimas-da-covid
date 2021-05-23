@@ -22,16 +22,12 @@ export default Vue.extend({
           name: 'João Alves da Rocha',
         },
         {
-          id: 1,
-          name: 'João Alves da Rocha',
+          id: 2,
+          name: 'Terezinha Xavier Corrêa',
         },
         {
-          id: 1,
-          name: 'João Alves da Rocha',
-        },
-        {
-          id: 1,
-          name: 'João Alves da Rocha',
+          id: 3,
+          name: 'Rocilda Soares Alves Silva',
         },
       ],
     }
