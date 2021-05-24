@@ -67,6 +67,9 @@ export default Vue.extend({
     right: 0;
     bottom: 0;
     z-index: $z-index-xlow;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
 
   &__item {
