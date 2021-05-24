@@ -6,6 +6,8 @@
 
 <script lang="ts">
 import Hero from '@/components/organanism/home/hero.vue'
+import { PersonInterface } from '@/types/people'
+import { HomePageInterface } from '@/types/page'
 
 import Vue from 'vue'
 
@@ -14,38 +16,13 @@ export default Vue.extend({
     Hero,
   },
 
-  data() {
+  async asyncData({ $axios }): Promise<HomePageInterface> {
+    const people: PersonInterface[] = await $axios.$get(
+      '/people?_page=1&_limit=5'
+    )
+
     return {
-      people: [
-        {
-          id: 1,
-          name: 'João Alves da Rocha',
-        },
-        {
-          id: 2,
-          name: 'Terezinha Xavier Corrêa',
-        },
-        {
-          id: 3,
-          name: 'Rocilda Soares Alves Silva',
-        },
-        {
-          id: 6,
-          name: 'João Alfredo de Amorim',
-        },
-        {
-          id: 7,
-          name: 'Rosilda Demétrio Magalhães',
-        },
-        {
-          id: 8,
-          name: 'Alexandre de Oliveira Calado',
-        },
-        {
-          id: 9,
-          name: 'Rubens Machioni Silva',
-        },
-      ],
+      people,
     }
   },
 })
