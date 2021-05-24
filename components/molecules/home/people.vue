@@ -58,7 +58,7 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: $z-index-low;
 
   &__list {
     position: absolute;
@@ -66,7 +66,7 @@ export default Vue.extend({
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: $z-index-xlow;
   }
 
   &__item {

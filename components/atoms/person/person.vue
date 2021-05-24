@@ -19,7 +19,7 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .person-name {
-  color: #999;
+  color: $color-granite-gray;
   font-size: 0.8rem;
 }
 </style>

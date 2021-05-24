@@ -23,14 +23,14 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .main-person {
-  padding: 20px;
-  background: #333;
+  padding: $spacing-3x;
+  background: $color-charcoal-gray;
   position: relative;
-  z-index: 5;
+  z-index: $z-index-xhigh;
 
   &__title {
     text-align: center;
-    color: #fff;
+    color: $color-white;
     font-size: 1.5rem;
     line-height: 2.5rem;
   }
