@@ -17,13 +17,11 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'preload',
-        href:
-          'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
         as: 'style',
       },
       {
-        href:
-          'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
+        href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap',
         rel: 'stylesheet',
       },
     ],
@@ -48,6 +46,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/style-resources',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -55,4 +54,9 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // StyleResources module configuration: https://github.com/nuxt-community/style-resources-module#readme
+  styleResources: {
+    scss: ['~/assets/styles/variables/_variables.scss'],
+  },
 }

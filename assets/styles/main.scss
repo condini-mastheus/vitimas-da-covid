@@ -1,10 +1,13 @@
 @import './reset';
-@import './colors';
+@import './variables/colors';
+
+$bg-color: #333;
+$font-size: 16px;
 
 html,
 body {
   height: 100%;
-  background: $charcoal-gray;
+  background: $bg-color;
 }
 
 html {
@@ -16,5 +19,5 @@ html {
 body {
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-size: $font-size;
 }
