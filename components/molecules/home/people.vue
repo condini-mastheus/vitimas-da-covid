@@ -1,8 +1,16 @@
 <template>
   <section class="people">
     <MainPerson :person="mainPerson" />
-    <ul class="people__people">
-      <li v-for="person in otherPeople" :key="person.id" class="people__person">
+    <ul class="people__list">
+      <li
+        v-for="person in otherPeople"
+        :key="person.id"
+        class="people__item"
+        :style="{
+          left: `${person.position[0]}%`,
+          top: `${person.position[1]}%`,
+        }"
+      >
         <Person :person="person" />
       </li>
     </ul>
@@ -11,7 +19,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { PeopleInterface, PersonInterface } from '@/types/people'
+import { PersonInterface } from '@/types/people'
 
 import Person from '@/components/atoms/person/person.vue'
 import MainPerson from '@/components/atoms/main-person/main-person.vue'
@@ -26,7 +34,7 @@ export default Vue.extend({
     people: {
       type: Array,
       required: true,
-    } as unknown as PropOptions<PeopleInterface>,
+    } as unknown as PropOptions<PersonInterface[]>,
   },
 
   computed: {
@@ -35,8 +43,8 @@ export default Vue.extend({
       return person
     },
 
-    otherPeople(): PeopleInterface {
-      const [, ...people]: PeopleInterface = this.people
+    otherPeople(): PersonInterface[] {
+      const [, ...people]: PersonInterface[] = this.people
       return people
     },
   },
@@ -52,7 +60,7 @@ export default Vue.extend({
   align-items: center;
   z-index: 2;
 
-  &__people {
+  &__list {
     position: absolute;
     top: 0;
     left: 0;
@@ -61,11 +69,10 @@ export default Vue.extend({
     z-index: 1;
   }
 
-  &__person {
+  &__item {
     position: absolute;
-    left: 50px;
-    top: 500px;
     display: inline-block;
+    white-space: nowrap;
   }
 }
 </style>

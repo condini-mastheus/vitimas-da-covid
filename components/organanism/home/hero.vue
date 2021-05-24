@@ -1,12 +1,13 @@
 <template>
-  <People :people="people" />
+  <People :people="peopleWithPositions" />
 </template>
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
 
-import { PeopleInterface } from '@/types/people'
+import { PersonInterface } from '@/types/people'
 import People from '@/components/molecules/home/people.vue'
+import Position from '@/lib/position'
 
 export default Vue.extend({
   name: 'Hero',
@@ -18,7 +19,18 @@ export default Vue.extend({
     people: {
       type: Array,
       required: true,
-    } as unknown as PropOptions<PeopleInterface>,
+    } as unknown as PropOptions<PersonInterface[]>,
+  },
+
+  computed: {
+    peopleWithPositions(): PersonInterface[] {
+      return this.people.map((person: PersonInterface) => {
+        return {
+          ...person,
+          position: Position().getPosition(),
+        }
+      })
+    },
   },
 })
 </script>

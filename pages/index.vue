@@ -29,6 +29,22 @@ export default Vue.extend({
           id: 3,
           name: 'Rocilda Soares Alves Silva',
         },
+        {
+          id: 6,
+          name: 'João Alfredo de Amorim',
+        },
+        {
+          id: 7,
+          name: 'Rosilda Demétrio Magalhães',
+        },
+        {
+          id: 8,
+          name: 'Alexandre de Oliveira Calado',
+        },
+        {
+          id: 9,
+          name: 'Rubens Machioni Silva',
+        },
       ],
     }
   },

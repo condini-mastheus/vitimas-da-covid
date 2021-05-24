@@ -1,7 +1,9 @@
 <template>
-  <h1 class="main-person">
-    Em memória de <strong class="main-person__name">{{ person.name }}</strong>
-  </h1>
+  <div class="main-person">
+    <h1 class="main-person__title">
+      Em memória de <strong class="main-person__name">{{ person.name }}</strong>
+    </h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -21,10 +23,17 @@ export default Vue.extend({
 
 <style lang="scss" scoped>
 .main-person {
-  text-align: center;
-  color: #fff;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
+  padding: 20px;
+  background: #333;
+  position: relative;
+  z-index: 5;
+
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 
   &__name {
     display: block;
